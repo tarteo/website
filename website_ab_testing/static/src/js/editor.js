@@ -47,7 +47,9 @@ odoo.define("website_ab_testing.editor", function(require) {
 
         start: function() {
             var res = this._super.apply(this, arguments);
-            this.masterId = Number(this.$el.find('[data-master-variant="1"]').data("id"));
+            this.masterId = Number(
+                this.$el.find('[data-master-variant="1"]').data("id")
+            );
             return res;
         },
 
